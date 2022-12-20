@@ -2,7 +2,10 @@
   <div>
     Server var (на клиенте потрется и станет недоступна): {{ config.serverVar }}
     <br>
-    Public var: {{ config.public.publicVar }}
+    Public var:
+    <pre>
+      {{ config.public }}
+    </pre>
   </div>
 </template>
 

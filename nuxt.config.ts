@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     serverVar: process.env.SERVER_ONLY_VAR,
     // Public keys that are exposed to the client
     public: {
-      publicVar: process.env.PUBLIC_VAR
+      ...process.env
     }
   }
 })
