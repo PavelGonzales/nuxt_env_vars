@@ -1,18 +1,14 @@
 <template>
   <div>
-    Server var (на клиенте потрется и станет недоступна): {{ config.serverVar }}
-    <br>
-    Public var:
+    process.env from server:
     <pre>
-      {{ config.public }}
+      {{ prcs }}
     </pre>
   </div>
 </template>
 
 <script setup>
 const config = useRuntimeConfig();
-
-const envVariable = config.apiSecret;
-
-console.log('Server var', config.serverVar)
+const { data } = await useAsyncData(() => process.env );
+const prcs = JSON.parse(JSON.stringify(data.value));
 </script>

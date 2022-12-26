@@ -5,4 +5,5 @@ node_modules
 .nitro
 .cache
 .output
+help.md
 dist
